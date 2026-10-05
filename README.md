@@ -1,218 +1,75 @@
-# 🍣 Nomi Sushi & Thai — Restaurant Website
+# 🍣 Nomi Sushi & Thai — Restaurant Web Platform
 
-A modern, responsive restaurant website for **Nomi Sushi & Thai**, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+A modern, responsive restaurant web application built with **Next.js, TypeScript, React, and Tailwind CSS**, designed to deliver a premium digital dining experience across desktop, tablet, and mobile devices.
 
-The project focuses on creating a polished digital restaurant experience with interactive menus, gallery browsing, multilingual support, dynamic opening hours, responsive layouts, animations, and mobile-friendly interactions.
-
-🌐 **Live Demo:** https://swedish-sushi.vercel.app/
+The project focuses on modern UI/UX, reusable components, responsive layouts, restaurant information, menu browsing, gallery experiences, online ordering flows, and production-ready frontend architecture.
 
 ---
 
-## ✨ Features
+## ✨ Overview
 
-### 🕐 Dynamic Opening Hours
+Nomi Sushi & Thai is a full-featured restaurant website designed to provide customers with a seamless way to:
 
-- Real-time restaurant opening status
-- Swedish timezone support (`Europe/Stockholm`)
+- Explore the restaurant and its offerings
+- Browse food menus and categories
+- View restaurant images through an interactive gallery
+- Check opening hours and restaurant status
+- Access contact and location information
+- Navigate to online ordering
+- Switch between supported languages
+- Use the website comfortably on mobile and desktop
+- Install the website as a Progressive Web App (PWA)
+
+The project combines a polished visual design with reusable architecture and interactive frontend features.
+
+---
+
+## 🎯 Problem & Solution
+
+### Problem
+
+Traditional restaurant websites can often provide a limited digital experience:
+
+- Static restaurant information
+- Poor mobile responsiveness
+- Difficult menu navigation
+- Unclear opening hours
+- Limited visual presentation
+- Cumbersome access to ordering and contact options
+
+### Solution
+
+Nomi Sushi & Thai provides a centralized digital restaurant experience with:
+
+- Responsive and mobile-first design
+- Dynamic restaurant opening-hour information
+- Interactive menu and gallery experiences
+- Online ordering access
+- Reusable UI components
+- Smooth animations and transitions
+- PWA capabilities
+- Multi-language support
+- Accessible navigation and interactions
+
+---
+
+# 🚀 Key Features
+
+## 🕐 Live Opening Hours
+
+The application includes a dynamic restaurant status system.
+
+### Features
+
+- Calculates restaurant status using the restaurant's configured timezone
 - Displays whether the restaurant is currently open or closed
 - Shows upcoming opening/closing information
-- Automatically refreshes the displayed status
+- Automatically refreshes the status
+- Handles different opening schedules
 
-### 🍱 Interactive Menu
-
-- Categorized restaurant menu
-- Responsive menu cards
-- Food imagery and detailed menu information
-- Reusable menu components
-- Mobile-friendly browsing experience
-
-### 🖼️ Interactive Gallery
-
-- Responsive image gallery
-- Full-screen lightbox experience
-- Keyboard navigation
-- Touch/swipe support on mobile
-- Image navigation controls
-
-### 🌍 English & Swedish Language Support
-
-- English and Swedish interface
-- Persistent language selection
-- Centralized translation system
-- React Context-based language management
-- Easy-to-extend translation structure
-
-### 🎨 Modern Glassmorphism UI
-
-- Frosted glass visual effects
-- Gradient backgrounds
-- Layered shadows
-- Rounded cards and interactive elements
-- Modern restaurant-focused visual design
-
-### ✨ Animations & Micro-interactions
-
-- Framer Motion animations
-- Scroll-based reveal effects
-- Smooth page transitions
-- Hover interactions
-- Animated backgrounds
-- Responsive motion behavior
-
-### 📱 Responsive Design
-
-Designed for:
-
-- 📱 Mobile
-- 📲 Tablet
-- 💻 Desktop
-- 🖥️ Large screens
-
-The interface adapts navigation, menus, galleries, CTAs, and interactive components to different screen sizes.
-
-### 🚀 Progressive Web App Features
-
-- Web app manifest
-- Install prompt UI
-- Mobile-friendly experience
-- App shortcuts
-- Local storage based preferences
-
-### ⚡ Floating Action System
-
-Quick access to important restaurant actions through responsive floating controls.
-
-Includes actions such as:
-
-- Ordering
-- Calling
-- Contacting
-- Reservations
-- Navigation/directions
-
-### 🔔 Toast Notifications
-
-Uses Sonner for contextual user feedback such as:
-
-- Copying contact information
-- Order actions
-- User interactions
-- Confirmation messages
-
-### 📩 Contact & Reservation Experience
-
-- Contact information
-- Reservation form
-- FAQ section
-- Newsletter section
-- Restaurant location information
-- Mobile-friendly contact actions
-
-### 📝 Blog Pages
-
-The project also includes reusable blog components and pages for:
-
-- Blog listing
-- Blog details
-- Sidebar
-- Related posts
-- Social sharing
-- Tags
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-- **Next.js 15**
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS 4**
-- **Framer Motion**
-
-### UI & Components
-
-- Radix UI
-- Lucide React
-- Class Variance Authority
-- Tailwind Merge
-- Yet Another React Lightbox
-
-### State & UX
-
-- React Context API
-- Local Storage
-- Next Themes
-- Sonner
-
-### Development Tools
-
-- ESLint
-- Prettier
-- PostCSS
-- Autoprefixer
-- Vercel
-
----
-
-## 🏗️ Project Structure
+### Example states
 
 ```text
-Nomi-Sushi-Thai-restaurant/
-│
-├── public/
-│   └── Static assets and images
-│
-├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   ├── blog/
-│   │   ├── blog-details/
-│   │   ├── blog-sidebar/
-│   │   ├── contact/
-│   │   ├── gallery/
-│   │   ├── menu/
-│   │   ├── signin/
-│   │   ├── signup/
-│   │   └── page.tsx
-│   │
-│   ├── components/
-│   │   ├── About/
-│   │   ├── Blog/
-│   │   ├── Contact/
-│   │   ├── Header/
-│   │   ├── home/
-│   │   ├── layout/
-│   │   ├── menu/
-│   │   ├── navigation/
-│   │   ├── gallery/
-│   │   └── ui/
-│   │
-│   ├── config/
-│   │   └── site configuration
-│   │
-│   ├── data/
-│   │   ├── gallery.ts
-│   │   ├── homeImages.ts
-│   │   ├── menu.ts
-│   │   └── menuImages.ts
-│   │
-│   ├── lib/
-│   │   ├── i18n/
-│   │   ├── openingHours.ts
-│   │   └── toast.ts
-│   │
-│   ├── types/
-│   │   └── TypeScript interfaces
-│   │
-│   └── styles/
-│       └── Global styles
-│
-├── .env.local.example
-├── .gitignore
-├── next.config.js
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
+🟢 Open Now
+🟡 Closing Soon
+🔴 Closed
